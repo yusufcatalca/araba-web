@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Video Arka Plan</title>
+    <style>
+        body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+body a{
+    color: blue;
+}
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#video-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.kayit-formu{
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    background: rgb(255, 255, 255, 0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow:  hidden;
+}
+
+.kayit-formu h2{
+    margin-top: 10px;
+    
+    color: #fff;
+    font-size: 40px;
+}
+.kayit-formu input{
+    display: block;
+    width: 100%;
+    padding: 0 16px;
+    height: 44px;
+    text-align: center;
+    box-sizing: border-box;
+    border: none;
+}
+.txt{
+    margin: 20px 0;
+    border-radius: 6px;
+}
+.kayit-btn{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background: #006699;
+    color: #fff;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: 0.8s;
+    display: block;
+}
+
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="video-background">
+            <source src="img/araba simulasyon.mp4" type="video/mp4">
+        </video>
+        <div class="giris-formu">
+            <h2>Üye Girişi</h2>
+        </div>
+        <div class="kayit-formu">
+            <form id="kayitForm" onsubmit="return kayitOl()">
+                <h2>Kayıt Ol</h2>
+                <input type="text" placeholder="Ad" class="Ad" required>
+                <br>
+                <input type="text" placeholder="Soyad" class="Soyad" required>
+                <br>
+                <input type="email" placeholder="E-Posta Adresi" class="email" required>
+                <br>
+                <input type="password" placeholder="Şifre" class="password" required>
+                <br>
+                <input type="password" placeholder="Şifre Tekrar" class="password" required>
+                <input type="submit" value="Kayıt Ol" class="kayit-btn">   
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function kayitOl() {
+            // Kayıt işlemleri burada yapılacak (örneğin, formu kontrol etmek)
+
+            // Eğer kayıt başarılı ise yeni bir sayfaya yönlendir
+            if (kayitBasarili()) {
+                window.open('kayitgiris.html', '_blank');
+                return false; // Formun gerçek sayfaya gitmesini engelle
+            }
+
+            return false; // Formun gerçek sayfaya gitmesini engelle
+        }
+
+        function kayitBasarili() {
+            // Burada gerçek kayıt kontrolü yapılabilir
+            // Örnek olarak her zaman başarılı kabul edelim
+            return true;
+        }
+    </script>
+</body>
+</html>

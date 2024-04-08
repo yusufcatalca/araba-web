@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Giriş Yap</title>
+    <style>
+        body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+body a{
+    color: blue;
+}
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#video-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.giriş-formu{
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    background: rgb(255, 255, 255, 0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow:  hidden;
+}
+
+.giriş-formu h2{
+    margin-top: 10px;
+    
+    color: #fff;
+    font-size: 40px;
+}
+.giriş-formu input{
+    display: block;
+    width: 100%;
+    padding: 0 16px;
+    height: 44px;
+    text-align: center;
+    box-sizing: border-box;
+    border: none;
+}
+.txt{
+    margin: 20px 0;
+    border-radius: 6px;
+}
+.giriş-btn{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background: #006699;
+    color: #fff;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: 0.8s;
+    display: block;
+}
+.kayit-btn{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background: #006699;
+    color: #fff;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: 0.8s;
+    display: block;
+}
+.kayit-formu{
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    background: rgb(255, 255, 255, 0);
+    color: white;
+    border-radius: 1px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow:  hidden;
+}
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="video-background">
+            <source src="img/araba simulasyon.mp4" type="video/mp4">
+        </video>
+        <div class="giris-formu">
+            <h2>Üye Girişi</h2>
+            
+        </div>
+    <div class="giriş-formu">
+        
+        <form action="girisyapildi.html">
+            <h2>Giriş Yap</h2>
+            <input type="email" placeholder="E-Posta Adresi"  class="email" required>
+            <br>
+            <input type="password" placeholder="Şifre"  class="password" required>
+            <input type="submit" value="Giriş Yap" class="giriş-btn">   
+            <a href="sifre.html" class="sifre-unuttum-link">Şifremi Unuttum</a>
+            <br> 
+            <br> 
+        </form>
+        
+        <form action="kayit.html">
+            <input type="submit" value="Kayıt Ol" class="kayit-btn">
+            <br>     
+        </form>   
+    </div>
+    <script>
+        function girisYap() {
+            // Giriş işlemleri burada yapılacak (örneğin, formu kontrol etmek)
+            
+            // Giriş başarılı ise yeni bir sayfaya yönlendir
+            window.location.href = 'index.html';
+        }
+    </script>
+
+</body>
+</html>
